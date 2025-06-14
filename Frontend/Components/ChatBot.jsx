@@ -90,7 +90,7 @@ What can I help you with today?`,
     useEffect(() => {
         const fetchBotData = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/chatbot/data")
+                const response = await fetch("https://blood-donation-backend-b325.onrender.com/api/chatbot/data")
                 const data = await response.json()
                 setBotData(data)
             } catch (error) {
