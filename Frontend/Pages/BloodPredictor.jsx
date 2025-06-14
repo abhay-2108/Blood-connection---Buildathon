@@ -60,7 +60,7 @@ const BloodDonationPredictor = () => {
       // Simulate API call delay for better UX
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
-      const res = await axios.post("http://localhost:5000/api/predict", formData)
+      const res = await axios.post("http://https://blood-donation-backend-b325.onrender.com/api/predict", formData)
       setResult({
         prediction: res.data.prediction === 1 ? "Likely to Donate" : "Not Likely to Donate",
         confidence: Math.floor(Math.random() * 20) + 80, // Simulated confidence
