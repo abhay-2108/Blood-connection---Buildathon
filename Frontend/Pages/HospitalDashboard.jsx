@@ -41,7 +41,7 @@ const HospitalDashboard = () => {
 
   const fetchProfile = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/hospitals/profile", {
+      const response = await axios.get("http://https://blood-donation-backend-b325.onrender.com/api/hospitals/profile", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -60,7 +60,7 @@ const HospitalDashboard = () => {
       setUpdating(true)
       setUpdateStatus({ message: "Updating inventory...", error: false })
 
-      const response = await axios.put("http://localhost:5000/api/hospitals/inventory", inventory, {
+      const response = await axios.put("http://https://blood-donation-backend-b325.onrender.com/api/hospitals/inventory", inventory, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
