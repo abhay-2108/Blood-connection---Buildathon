@@ -37,7 +37,7 @@ const FindDonor = () => {
 
     try {
       const query = new URLSearchParams(form).toString()
-      const response = await fetch(`http://localhost:5000/api/donors/search?${query}`)
+      const response = await fetch(`http://https://blood-donation-backend-b325.onrender.com/api/donors/search?${query}`)
       const data = await response.json()
 
       if (response.ok) {
@@ -97,7 +97,7 @@ const FindDonor = () => {
         donorLocation: `${emailModal.donor.city}, ${emailModal.donor.state}`,
       }
 
-      const response = await fetch("http://localhost:5000/api/donors/send-email", {
+      const response = await fetch("http://https://blood-donation-backend-b325.onrender.com/api/donors/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
