@@ -50,7 +50,7 @@ const Contact = () => {
       try {
         console.log("📤 Sending contact form data:", form)
 
-        const response = await fetch("http://localhost:5000/api/contact/send-message", {
+        const response = await fetch("http://https://blood-donation-backend-b325.onrender.com/api/contact/send-message", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
