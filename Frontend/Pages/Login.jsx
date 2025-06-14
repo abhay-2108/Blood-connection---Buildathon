@@ -226,7 +226,7 @@ const Login = () => {
                 const endpoint =
                     userType === "user" ? "login/user" : "login/hospital";
                 const response = await fetch(
-                    `http://localhost:5000/api/auth/${endpoint}`,
+                    `http://https://blood-donation-backend-b325.onrender.com/api/auth/${endpoint}`,
                     {
                         method: "POST",
                         headers: {
